@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>html,body{margin:0;background:#0A0A0A}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@300,400,500,600,700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Film Editing — Aidan Tack</title>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0A0A0A"></rect><text x="50" y="50" fill="#FF4D00" font-family="Archivo, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="-2" text-anchor="middle" dominant-baseline="central">FILM</text></svg></template>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+  html, body { margin:0; padding:0; background:#D9D9D9; }
+  * { box-sizing:border-box; }
+  a { color:#0A0A0A; text-decoration:none; }
+  a:hover { color:#C43C00; }
+  ::selection { background:#FF4D00; color:#0A0A0A; }
+  @keyframes omCurtainLift { 0%, 22% { transform:translateY(0) } 100% { transform:translateY(-100%) } }
+  @keyframes omCurtainTitle { 0% { opacity:0 } 10% { opacity:1 } 48% { opacity:1 } 72% { opacity:0 } 100% { opacity:0 } }
+  body::after { content:''; position:fixed; inset:0; z-index:70; pointer-events:none; opacity:0.5; mix-blend-mode:multiply; background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxODAnIGhlaWdodD0nMTgwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC44NScgbnVtT2N0YXZlcz0nMycgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPjxmZUNvbG9yTWF0cml4IHR5cGU9J3NhdHVyYXRlJyB2YWx1ZXM9JzAnLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0nMTgwJyBoZWlnaHQ9JzE4MCcgZmlsdGVyPSd1cmwoI24pJyBvcGFjaXR5PScwLjQyJy8+PC9zdmc+"); background-size:180px 180px; }
+  @media (max-width: 860px) { .om-nav-links { order:3; width:100%; overflow-x:auto; white-space:nowrap; gap:18px !important; border-top:1px solid rgba(10,10,10,0.12); margin-top:4px; } .om-nav-links > a, .om-nav-links > span { display:inline-flex; align-items:center; min-height:44px; } .om-proj { grid-template-columns:minmax(0,1fr) !important; } .om-lede { grid-template-columns:minmax(0,1fr) !important; } }
+</style>
+</helmet>
+<div style="background:#D9D9D9; color:#0A0A0A; font-family:'Clash Grotesk', Archivo, Helvetica, sans-serif">
+  <div id="curtain" style="translate:0 -100%; position:fixed; inset:0; z-index:90; background:#0A0A0A; color:#FAFAFA; display:flex; align-items:center; justify-content:center; pointer-events:none">
+    <span id="curtainTitle" style="opacity:0; font-size:clamp(40px,9vw,150px); font-weight:600; letter-spacing:-0.045em; text-transform:uppercase; line-height:0.85">Film</span>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px; padding:14px 22px; border-bottom:1px solid rgba(10,10,10,0.14); position:fixed; top:0; left:0; right:0; background:rgba(217,217,217,0.9); backdrop-filter:blur(10px); z-index:40">
+    <a class="pagelink" data-title="Tack" href="Index.dc.html" style="font-size:clamp(26px,2.9vw,42px); font-weight:600; letter-spacing:-0.04em; text-transform:uppercase; line-height:0.8">Tack</a>
+    <div class="om-nav-links" style="display:flex; gap:22px; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(10,10,10,0.66)">
+      <span style="color:#C43C00">Film</span>
+      <a class="pagelink" data-title="Photography" href="Photography.dc.html">Photography</a>
+      <a class="pagelink" data-title="Marketing" href="Marketing.dc.html">Marketing</a>
+      <a class="pagelink" data-title="About" href="About.dc.html">About</a>
+      <a class="pagelink" data-title="Contact" href="Contact.dc.html">Contact</a>
+    </div>
+    <a href="mailto:tackaidan@gmail.com" style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#C43C00">tackaidan@gmail.com</a>
+  </div>
+
+  <div style="position:relative; height:100vh; min-height:520px; overflow:hidden; color:#FAFAFA">
+    <video id="reel" src="assets/film/reel-v2.mp4" autoplay="" muted="" loop="" playsinline="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover"></video>
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.05) 38%, rgba(10,10,10,0.82) 100%)"></div>
+    <div style="position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:0 18px 22px">
+      <div style="overflow:hidden">
+        <h1 id="heroTitle" style="margin: 0; font-size: clamp(52px,13.2vw,240px); font-weight: 600; letter-spacing: -0.05em; text-transform: uppercase; line-height: 0.82; white-space: nowrap">Film Editing</h1>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:10px 28px; justify-content:space-between; align-items:baseline; padding-top:14px; border-top:1px solid rgba(250,250,250,0.3); margin-top:14px; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(250,250,250,0.85)">
+        <span>REEL - 2026</span>
+        <span>Lead editor · Colorist · DIT</span>
+        <span>15 PROJECTS / 2023-2026</span>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="om-lede" style="display:grid; grid-template-columns:minmax(0,0.34fr) minmax(0,0.66fr); gap:clamp(24px,5vw,72px); align-items:center; max-width:1180px; margin:0 auto; padding:clamp(48px,11vh,130px) clamp(20px,5vw,64px) clamp(40px,8vh,100px); border-bottom:1px solid rgba(10,10,10,0.14)">
+
+    <div style="display:flex; flex-direction:column; gap:12px">
+      <div style="position: relative; width: 100%; aspect-ratio: 4/5; background-color: #D9D9D9">
+        <image-slot id="film-lede" shape="rect" fit="cover" placeholder="Drop a BTS still or portrait" style="position:absolute; inset:0; width:100%; height:100%"></image-slot>
+      </div>
+      
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:clamp(28px,4vh,48px)">
+      <p class="fadeup" style="margin: 0; font-size: clamp(22px,3.1vw,50px); line-height: 1.06; font-weight: 600; font-weight:600; letter-spacing: -0.028em; text-wrap: pretty; max-width: 100%; text-align: left">I've cut 5 films between 2024 and 2026. One of them, <em style="font-style: normal; color: #FF4D00;">Nothing But The Truth</em>, was a Midwest Emmy selection in 2025.</p>
+      <p class="fadeup" style="margin: 0; font-family: Manrope, sans-serif; font-size: clamp(13px,1.05vw,15.5px); line-height: 1.55; color: rgba(10,10,10,0.68); max-width: 56ch; text-wrap: pretty; position: relative; left: 3px">Most of these I carried from card-offload to DCP. From DIT on set, lead editor in post, to colorist at the end of it. Two years at Premio Media taught me how to run a cut through corporate client revisions without losing the film in the notes.</p>
+    </div>
+  </div>
+
+  <div style="display:flex; flex-direction:column">
+
+    <a class="proj om-proj" href="#covenant" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.92fr); gap:clamp(18px,3vw,48px); align-items:center; padding:clamp(30px,6vh,72px) 18px; border-bottom:1px solid rgba(10,10,10,0.14)">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <div style="display:flex; gap:14px; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(10,10,10,0.5)"><span style="color:#C43C00">01</span><span>2026</span><span>DOCUMENTARY - CENTENNIAL FILM</span></div>
+        <h2 class="ptitle" style="margin:0; font-size:clamp(30px,5.4vw,92px); font-weight:600; letter-spacing:-0.04em; text-transform:uppercase; line-height:0.86">Covenant Point 100</h2>
+        <p style="margin:0; font-family:Manrope, sans-serif; font-size:clamp(13px,1.05vw,15.5px); line-height:1.5; color:rgba(10,10,10,0.78); max-width:44ch; text-wrap:pretty">Documentary campaign video for the $2.6M dining hall renovation during the 100 year celebration.</p>
+        <div style="font-family:Manrope, sans-serif; font-size:12.5px; line-height:1.5; color:rgba(10,10,10,0.6)">Lead Editor · Colorist · DP · Director · Writer</div>
+      </div>
+      <div class="pshot" style="position:relative; overflow:hidden; aspect-ratio:16/9; background:#C6C3BE">
+        <img src="assets/web/film-1.jpg" alt="Covenant Point 100" loading="lazy" style="width: 100%; height: 157%; margin-top: -15%; object-fit: cover; display: block">
+      </div>
+    </a>
+
+    <a class="proj om-proj" href="#cow" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.92fr); gap:clamp(18px,3vw,48px); align-items:center; padding:clamp(30px,6vh,72px) 18px; border-bottom:1px solid rgba(10,10,10,0.14)">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <div style="display:flex; gap:14px; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(10,10,10,0.5)"><span style="color:#C43C00">02</span><span>2025</span><span>BFA Short Film</span></div>
+        <h2 class="ptitle" style="margin:0; font-size:clamp(30px,5.4vw,92px); font-weight:600; letter-spacing:-0.04em; text-transform:uppercase; line-height:0.86">The Cow</h2>
+        <p style="margin:0; font-family:Manrope, sans-serif; font-size:clamp(13px,1.05vw,15.5px); line-height:1.5; color:rgba(10,10,10,0.78); max-width:44ch; text-wrap:pretty">The employee of a vegan restaurant finds something very disturbing in the basement during his night shift.</p><div style="font-family:Manrope, sans-serif; font-size:12.5px; line-height:1.5; color:rgba(10,10,10,0.6)">Lead Editor · BTS Photographer · DIT</div>
+      </div>
+      <div class="pshot" style="position:relative; overflow:hidden; aspect-ratio:16/9; background:#C6C3BE">
+        <img src="assets/web/film-2.jpg" alt="The Cow" loading="lazy" style="width: 107%; margin-top: -9%; object-fit: cover; display: block; height: 445px; position: relative; top: 45px">
+      </div>
+    </a>
+
+    <a class="proj om-proj" href="#truth" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.92fr); gap:clamp(18px,3vw,48px); align-items:center; padding:clamp(30px,6vh,72px) 18px; border-bottom:1px solid rgba(10,10,10,0.14)">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <div style="display:flex; flex-wrap:wrap; gap:10px 14px; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(10,10,10,0.5)"><span style="color:#C43C00">03</span><span>2025</span><span>BFA Short Film</span><span style="background:#FF4D00; color:#0A0A0A; padding:3px 7px">Midwest Emmy selection 2025</span></div>
+        <h2 class="ptitle" style="margin:0; font-size:clamp(30px,5.4vw,92px); font-weight:600; letter-spacing:-0.04em; text-transform:uppercase; line-height:0.86">Nothing But The Truth</h2>
+        <p style="margin:0; font-family:Manrope, sans-serif; font-size:clamp(13px,1.05vw,15.5px); line-height:1.5; color:rgba(10,10,10,0.78); max-width:44ch; text-wrap:pretty">A group of friends get together for a typical game night when the game aggressively revels all their secrets.&nbsp;</p><div style="font-family:Manrope, sans-serif; font-size:12.5px; line-height:1.5; color:rgba(10,10,10,0.6)">Lead Editor · Colorist · BTS Photographer · DIT</div>
+      </div>
+      <div class="pshot" style="position:relative; overflow:hidden; aspect-ratio:16/9; background:#C6C3BE">
+        <img src="assets/web/film-3.jpg" alt="Nothing But The Truth" loading="lazy" style="width: 100%; height: 130%; margin-top: -6%; object-fit: cover; display: block">
+      </div>
+    </a>
+
+    <a class="proj om-proj" href="#puck" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.92fr); gap:clamp(18px,3vw,48px); align-items:center; padding:clamp(30px,6vh,72px) 18px; border-bottom:1px solid rgba(10,10,10,0.14)">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <div style="display:flex; gap:14px; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(10,10,10,0.5)"><span style="color:#C43C00">04</span><span>2025</span><span>BFA Short Film</span></div>
+        <h2 class="ptitle" style="margin:0; font-size:clamp(30px,5.4vw,92px); font-weight:600; letter-spacing:-0.04em; text-transform:uppercase; line-height:0.86">Puck</h2><p style="margin:0; font-family:Manrope, sans-serif; font-size:clamp(13px,1.05vw,15.5px); line-height:1.5; color:rgba(10,10,10,0.78); max-width:44ch; text-wrap:pretty">A puppet starts his freshman year of college, struggling to fit in, his roommate gets him to break out of his shell.</p>
+        <div style="font-family:Manrope, sans-serif; font-size:12.5px; line-height:1.5; color:rgba(10,10,10,0.6)">Lead Editor · Colorist · BTS Photographer · DIT</div>
+      </div>
+      <div class="pshot" style="position:relative; overflow:hidden; aspect-ratio:16/9; background:#C6C3BE">
+        <img src="assets/web/film-4.jpg" alt="Puck" loading="lazy" style="width: 100%; height: 130%; margin-top: -8%; object-fit: cover; display: block">
+      </div>
+    </a>
+
+    <a class="proj om-proj" href="#pandora" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.92fr); gap:clamp(18px,3vw,48px); align-items:center; padding:clamp(30px,6vh,72px) 18px; border-bottom:1px solid rgba(10,10,10,0.14)">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <div style="display:flex; gap:14px; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(10,10,10,0.5)"><span style="color:#C43C00">05</span><span>2024</span><span>Cine 3 Short Film</span></div>
+        <h2 class="ptitle" style="margin:0; font-size:clamp(30px,5.4vw,92px); font-weight:600; letter-spacing:-0.04em; text-transform:uppercase; line-height:0.86">Pandora's Apple Box</h2><p style="margin:0; font-family:Manrope, sans-serif; font-size:clamp(13px,1.05vw,15.5px); line-height:1.5; color:rgba(10,10,10,0.78); max-width:44ch; text-wrap:pretty">A duo of secret agents are on a mission to capture a relic from a apple box only to be confronted by guards.</p>
+        <div style="font-family:Manrope, sans-serif; font-size:12.5px; line-height:1.5; color:rgba(10,10,10,0.6)">Lead Editor · Colorist · BTS Photographer</div>
+      </div>
+      <div class="pshot" style="position:relative; overflow:hidden; aspect-ratio:16/9; background:#C6C3BE">
+        <img src="assets/web/film-5.jpg" alt="Pandora's Apple Box" loading="lazy" style="width:100%; height:130%; margin-top:-15%; object-fit:cover; display:block">
+      </div>
+    </a>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:1px; background:rgba(10,10,10,0.14); border-bottom:1px solid rgba(10,10,10,0.14)">
+    <div style="background:#D9D9D9; padding:clamp(24px,5vh,56px) 18px; display:flex; flex-direction:column; gap:8px"><span style="font-size:clamp(34px,4.4vw,74px); font-weight:600; letter-spacing:-0.04em; line-height:0.9">5</span><span style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(10,10,10,0.55)">Films cut</span></div>
+    <div style="background:#D9D9D9; padding:clamp(24px,5vh,56px) 18px; display:flex; flex-direction:column; gap:8px"><span style="font-size:clamp(34px,4.4vw,74px); font-weight:600; letter-spacing:-0.04em; line-height:0.9">4</span><span style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(10,10,10,0.55)">BFA theses as lead editor</span></div>
+    <div style="background:#D9D9D9; padding:clamp(24px,5vh,56px) 18px; display:flex; flex-direction:column; gap:8px"><span style="font-size:clamp(34px,4.4vw,74px); font-weight:600; letter-spacing:-0.04em; line-height:0.9; color:#C43C00">1</span><span style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(10,10,10,0.55)">Midwest Emmy selection</span></div>
+    <div style="background:#D9D9D9; padding:clamp(24px,5vh,56px) 18px; display:flex; flex-direction:column; gap:8px"><span style="font-size:clamp(34px,4.4vw,74px); font-weight:600; letter-spacing:-0.04em; line-height:0.9">2</span><span style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(10,10,10,0.55)">Years at Premio Media</span></div>
+  </div>
+
+  <div style="padding:clamp(28px,6vh,64px) 18px clamp(20px,3vh,30px); display:flex; flex-direction:column; gap:clamp(24px,4vh,48px)">
+    <div style="display:flex; flex-wrap:wrap; gap:12px 24px; justify-content:space-between; align-items:baseline">
+      <a class="pagelink" data-title="Photography" href="Photography.dc.html" style="font-size:clamp(30px,6vw,104px); font-weight:600; letter-spacing:-0.045em; text-transform:uppercase; line-height:0.86">NEXT - PHOTOGRAPHY</a>
+      
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:14px 34px; justify-content:space-between; align-items:flex-end; border-top:1px solid rgba(10,10,10,0.14); padding-top:18px; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(10,10,10,0.55)">
+      <span style="display:flex; flex-wrap:wrap; gap:10px 26px">
+        <a href="mailto:tackaidan@gmail.com">tackaidan@gmail.com</a>
+        <a href="tel:+17794234116">779.423.4116</a>
+        <a href="https://www.linkedin.com/in/aidan-tack-334219323/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/tacks_perspective/" target="_blank" rel="noopener">Instagram</a>
+      </span>
+      <span>Chicago, IL -&nbsp;<span id="clock" style="color: rgb(196, 60, 0);">6:05:14 PM</span></span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.initSmooth();
+    this.initCurtain();
+    this.initClock();
+    this.initMotion();
+    const v = document.getElementById('reel');
+    if (v) {
+      v.muted = true;
+      v.loop = true;
+      const kick = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+      v.addEventListener('ended', () => { try { v.currentTime = 0; } catch (e) {} kick(); });
+      let fails = 0;
+      v.addEventListener('error', () => { fails = 99; if (this.loopT) clearInterval(this.loopT); });
+      v.addEventListener('pause', () => { if (!v.ended && !document.hidden && fails < 8) { fails++; kick(); } });
+      v.addEventListener('loadedmetadata', kick);
+      document.addEventListener('visibilitychange', () => { if (!document.hidden) kick(); });
+      this.loopT = setInterval(() => {
+        if (v.readyState === 0 || fails >= 8) { clearInterval(this.loopT); return; }
+        if (v.paused && !document.hidden) kick();
+      }, 1500);
+      kick();
+    }
+  }
+  componentWillUnmount() {
+    if (this.smoothRaf) cancelAnimationFrame(this.smoothRaf); if (this.clockT) clearInterval(this.clockT); if (this.loopT) clearInterval(this.loopT); }
+  initSmooth() {
+    const L = window.Lenis;
+    if (!L || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const ST = window.ScrollTrigger;
+    if (window.__lenis) {
+      if (ST) window.__lenis.on('scroll', ST.update);
+      this.bindAnchors(window.__lenis);
+      return;
+    }
+    const lenis = new L({
+      duration: 1.15,
+      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      wheelMultiplier: 0.9,
+      touchMultiplier: 1.6
+    });
+    window.__lenis = lenis;
+    if (window.gsap) window.gsap.ticker.lagSmoothing(0);
+    if (ST) lenis.on('scroll', ST.update);
+    const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
+    requestAnimationFrame(raf);
+    this.bindAnchors(lenis);
+  }
+  bindAnchors(lenis) {
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      if (a.dataset.smoothBound) return;
+      a.dataset.smoothBound = '1';
+      a.addEventListener('click', e => {
+        const el = document.querySelector(a.getAttribute('href'));
+        if (!el) return;
+        e.preventDefault();
+        lenis.scrollTo(el, { offset: -70 });
+      });
+    });
+  }
+  initCurtain() {
+    const g = window.gsap, c = document.getElementById('curtain');
+    if (!c) return;
+    const t = c.querySelector('#curtainTitle');
+    if (g && !window.__introPlayed) {
+      window.__introPlayed = 1;
+      c.style.translate = '0 0';
+      g.set(c, { yPercent: 0 });
+      if (t) {
+        g.set(t, { opacity: 0, yPercent: 0 });
+        g.to(t, { opacity: 1, duration: 0.3, ease: 'power2.out' });
+        g.to(t, { opacity: 0, duration: 0.3, delay: 0.5 });
+      }
+      g.to(c, { yPercent: -100, duration: 0.95, ease: 'expo.inOut', delay: 0.55 });
+    }
+    document.querySelectorAll('a.pagelink').forEach(a => {
+      if (a.dataset.curtainBound) return;
+      a.dataset.curtainBound = '1';
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href || e.metaKey || e.ctrlKey || e.shiftKey) return;
+        if (!g) return;
+        e.preventDefault();
+        c.style.translate = '0 0';
+        if (t) {
+          t.textContent = a.dataset.title || 'Tack';
+          g.set(t, { opacity: 1, yPercent: 40 });
+        }
+        g.set(c, { yPercent: 100 });
+        g.to(c, { yPercent: 0, duration: 0.7, ease: 'expo.inOut' });
+        if (t) g.to(t, { yPercent: 0, duration: 0.7, ease: 'expo.out', onComplete: () => { window.location.href = href; } });
+        else g.delayedCall(0.7, () => { window.location.href = href; });
+      });
+    });
+  }
+  initClock() {
+    const el = document.getElementById('clock'); if (!el) return;
+    const tick = () => { el.textContent = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Chicago', hour12: true, hour: 'numeric', minute: '2-digit', second: '2-digit' }); };
+    tick(); this.clockT = setInterval(tick, 1000);
+  }
+  initMotion() {
+    const g = window.gsap; if (!g) return;
+    const ST = window.ScrollTrigger;
+    if (ST) g.registerPlugin(ST);
+    g.fromTo('#heroTitle', { yPercent: 108 }, { yPercent: 0, duration: 1.3, ease: 'expo.out', delay: 0.55 });
+
+    if (ST) {
+      g.utils.toArray('.fadeup').forEach(el => {
+        g.fromTo(el, { y: 34, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 88%' } });
+      });
+      g.utils.toArray('.proj').forEach(row => {
+        const shot = row.querySelector('.pshot');
+        const img = shot.querySelector('img');
+        const title = row.querySelector('.ptitle');
+        g.fromTo(shot, { clipPath: 'inset(0% 0% 100% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.15, ease: 'expo.out', scrollTrigger: { trigger: row, start: 'top 82%' } });
+        g.fromTo(title, { yPercent: 70, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 1.05, ease: 'expo.out', scrollTrigger: { trigger: row, start: 'top 82%' } });
+        g.fromTo(img, { scale: 1.16 }, { scale: 1, duration: 1.6, ease: 'expo.out', scrollTrigger: { trigger: row, start: 'top 82%' } });
+        g.fromTo(img, { yPercent: 5 }, { yPercent: -5, ease: 'none', scrollTrigger: { trigger: row, start: 'top bottom', end: 'bottom top', scrub: true } });
+        row.addEventListener('mouseenter', () => {
+          g.to(title, { x: 16, color: '#FF4D00', duration: 0.5, ease: 'power3.out' });
+          g.to(img, { scale: 1.05, duration: 0.8, ease: 'power3.out' });
+        });
+        row.addEventListener('mouseleave', () => {
+          g.to(title, { x: 0, color: '#0A0A0A', duration: 0.5, ease: 'power3.out' });
+          g.to(img, { scale: 1, duration: 0.8, ease: 'power3.out' });
+        });
+      });
+    }
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

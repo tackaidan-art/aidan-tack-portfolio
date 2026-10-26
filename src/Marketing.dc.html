@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketing — Aidan Tack × Hemut</title>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0A0A0A"></rect><text x="50" y="50" fill="#FFD333" font-family="Archivo, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="-2" text-anchor="middle" dominant-baseline="central">MKTG</text></svg></template>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@300,400,500,600,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<style>
+  html, body { margin:0; padding:0; background:#0A0A0A; }
+  * { box-sizing:border-box; }
+  a { color:#121212; text-decoration:none; }
+  a:hover { color:#8A6A00; }
+  ::selection { background:#FFD333; color:#121212; }
+  @keyframes mkTicker { from { transform:translateX(0) } to { transform:translateX(-50%) } }
+  @media (max-width: 900px) {
+    .om-nav-links { order:3; width:100%; overflow-x:auto; white-space:nowrap; gap:18px !important; border-top:1px solid rgba(18,18,18,0.12); margin-top:4px; }
+    .om-nav-links > a, .om-nav-links > span { display:inline-flex; align-items:center; min-height:44px; }
+    .om-3 { grid-template-columns:minmax(0,1fr) !important; }
+    .om-2 { grid-template-columns:minmax(0,1fr) !important; }
+  }
+</style>
+</helmet>
+<div style="background:#FAFAFA; color:#121212; font-family:'Clash Grotesk', Archivo, Helvetica, sans-serif">
+
+  <div id="curtain" style="translate:0 -100%; position:fixed; inset:0; z-index:90; background:#121212; color:#FAFAFA; display:flex; align-items:center; justify-content:center; pointer-events:none">
+    <span id="curtainTitle" style="opacity:0; font-size:clamp(40px,9vw,150px); font-weight:600; letter-spacing:-0.04em; text-transform:uppercase; line-height:0.85">Marketing</span>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px; padding:14px 20px; border-bottom:1px solid rgba(18,18,18,0.14); position:sticky; top:0; background:rgba(250,250,250,0.88); backdrop-filter:blur(10px); z-index:40">
+    <a class="pagelink" data-title="Tack" href="Index.dc.html" style="font-family:'Clash Grotesk', Archivo, sans-serif; font-size:clamp(26px,2.9vw,42px); font-weight:600; letter-spacing:-0.04em; text-transform:uppercase; line-height:0.8">Tack</a>
+    <div class="om-nav-links" style="display:flex; gap:22px; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(18,18,18,0.6)">
+      <a class="pagelink" data-title="Film" href="Film.dc.html">Film</a>
+      <a class="pagelink" data-title="Photography" href="Photography.dc.html">Photography</a>
+      <span style="color:#121212; border-bottom:2px solid #FFD333">Marketing</span>
+      <a class="pagelink" data-title="About" href="About.dc.html">About</a>
+      <a class="pagelink" data-title="Contact" href="Contact.dc.html">Contact</a>
+    </div>
+    <a href="mailto:tackaidan@gmail.com" style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(18,18,18,0.6)">tackaidan@gmail.com</a>
+  </div>
+
+  <div style="padding:clamp(22px,4vh,44px) 20px clamp(30px,6vh,72px)">
+    <h1 style="margin:0 0 clamp(20px,4vh,44px); text-align:center; font-size:clamp(58px,15vw,260px); font-weight:600; letter-spacing:-0.05em; text-transform:uppercase; line-height:0.82">Marketing</h1>
+    <div class="om-3" style="display:grid; grid-template-columns:minmax(0,0.28fr) minmax(0,1fr) minmax(0,0.44fr); gap:clamp(16px,3vw,40px); align-items:start; border-top:1px solid rgba(18,18,18,0.14); padding-top:clamp(16px,3vh,30px)">
+      <div style="display:flex; flex-direction:column; gap:12px">
+        <span style="font-size:clamp(30px,3.6vw,62px); font-weight:500; letter-spacing:-0.03em; line-height:0.9">01</span>
+        <span style="font-family:Manrope, sans-serif; font-size:10.5px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(18,18,18,0.55); line-height:1.7">Hemut<br>Rockford, IL<br>2025-2026</span>
+        <span style="font-family:Manrope, sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; background:#FFD333; padding:5px 8px; width:max-content; max-width:100%">Head of Marketing</span>
+      </div>
+      <div id="hemutFrame" style="background:#121212; padding:clamp(18px,3vw,40px); display:flex; align-items:center; justify-content:center; min-height:clamp(200px,38vh,420px)">
+        <img src="assets/web/assets_marketing_hemut-container-lockup.jpg" alt="Hemut lockup over a freight container" style="width:100%; height:auto; display:block">
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px; font-family:Manrope, sans-serif">
+        <p style="margin:0; font-size:13.5px; line-height:1.6; color:rgba(18,18,18,0.72); text-wrap:pretty">Hemut builds AI systems for freight carriers and brokers running dispatch, quoting and billing on software that hasn't changed in twenty years. I ran marketing: built the department from nothing, directed 8 creatives, and put a voice on the product.</p>
+        <p style="margin:0; font-size:13.5px; line-height:1.6; color:rgba(18,18,18,0.72); text-wrap:pretty">Five weeks after launching the channels, we gained 16,000 followers and 4.5M+ views. The leads behind that produced $500,000+ in pipeline.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:7px; font-family:Manrope, sans-serif; font-size:10px; letter-spacing:0.11em; text-transform:uppercase; color:rgba(18,18,18,0.6)">
+          <span style="border:1px solid rgba(18,18,18,0.22); padding:4px 7px">Brand direction</span>
+          <span style="border:1px solid rgba(18,18,18,0.22); padding:4px 7px">Art direction</span>
+          <span style="border:1px solid rgba(18,18,18,0.22); padding:4px 7px">Copywriting</span>
+          <span style="border:1px solid rgba(18,18,18,0.22); padding:4px 7px">Photo &amp; video direction</span>
+          <span style="border:1px solid rgba(18,18,18,0.22); padding:4px 7px">Team leadership</span>
+          <span style="border:1px solid rgba(18,18,18,0.22); padding:4px 7px">Go-to-market</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#FAFAFA; color:#121212; padding:clamp(40px,9vh,110px) 20px clamp(30px,6vh,80px); border-top:1px solid rgba(18,18,18,0.14)">
+    <div style="display:flex; flex-wrap:wrap; gap:10px 18px; align-items:baseline; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(18,18,18,0.55); padding-bottom:clamp(18px,3vh,32px)">
+      <span style="color:#121212">02 - THE REDESIGN</span>
+      <span style="background:#FFD333; color:#121212; padding:4px 8px">Brand &amp; messaging</span>
+    </div>
+    <h2 class="rise" style="margin:0; font-size:clamp(40px,9.6vw,168px); font-weight:600; letter-spacing:-0.05em; line-height:0.86; text-transform:uppercase">Built to<br>be <span style="color: #FFD334">trusted</span></h2>
+    <div class="om-2" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(18px,4vw,60px); padding-top:clamp(24px,5vh,60px); font-family:Manrope, sans-serif">
+      <p style="margin:0; font-size:clamp(14px,1.35vw,19px); line-height:1.5; font-weight:600; text-wrap:pretty">Hemut started on a flat, junior guideline with almost no messaging behind it. The redesign gave the brand a foundation to stand on and a professional tone, so a carrier signing a contract feels good about the choice.</p>
+      <div style="display:flex; flex-direction:column; gap:18px">
+        <p style="margin:0; font-size:13.5px; line-height:1.6; color:rgba(18,18,18,0.75); text-wrap:pretty">One mark, one accent, one voice. Every creative on the team designed against the same line instead of guessing.</p>
+        <div style="border-top:2px solid #121212; padding-top:14px">
+          <span style="display:block; font-family:'Clash Grotesk', Archivo, sans-serif; font-size:clamp(22px,3vw,46px); font-weight:600; letter-spacing:-0.035em; line-height:1">AI Copilot for trucking workflows</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="mkTile" data-soft="1" style="overflow:hidden; background:#121212; aspect-ratio:1.95; margin-top:clamp(26px,5vh,60px)">
+      <img src="assets/web/assets_marketing_mockup-posters.jpg" alt="Hemut poster set on a black wall" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block">
+    </div>
+
+    <div class="om-2" style="display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:10px; padding-top:10px">
+      <div class="mkTile" style="overflow:hidden; background:#121212; min-height:clamp(200px,32vh,400px)">
+        <img src="assets/web/assets_marketing_mockup-trailer.jpg" alt="Hemut trailer livery" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block">
+      </div>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:10px">
+        <div class="mkTile" style="overflow:hidden; background:#121212; min-height:clamp(200px,32vh,400px)">
+          <img src="assets/web/assets_marketing_mockup-lanyard.jpg" alt="Hemut credential" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block">
+        </div>
+        <div class="mkTile" style="overflow:hidden; background:#121212; min-height:clamp(200px,32vh,400px)">
+          <img src="assets/web/assets_marketing_mockup-tape.jpg" alt="Hemut branded strapping" loading="lazy" style="width: 145%; height: 100%; object-fit: cover; display: block">
+        </div>
+      </div>
+    </div>
+
+    <div class="mkTile" style="overflow:hidden; background:#121212; margin-top:10px; height:clamp(180px,34vh,420px)">
+      <img src="assets/web/assets_marketing_mockup-mark-sand.jpg" alt="Hemut mark on black sand" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block">
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(96px,1fr)); gap:1px; background:rgba(18,18,18,0.14); border:1px solid rgba(18,18,18,0.14); margin-top:clamp(24px,5vh,54px)">
+      <div class="sw" style="background:#121212; padding:clamp(18px,3vh,34px) 14px; display:flex; flex-direction:column; gap:5px; min-height:104px; justify-content:flex-end">
+        <span style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.1em; color:#FAFAFA">#121212</span>
+        <span style="font-family:Manrope, sans-serif; font-size:9.5px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(250,250,250,0.6)">Primary</span>
+      </div>
+      <div class="sw" style="background:#FAFAFA; padding:clamp(18px,3vh,34px) 14px; display:flex; flex-direction:column; gap:5px; min-height:104px; justify-content:flex-end">
+        <span style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.1em; color:#121212">#FAFAFA</span>
+        <span style="font-family:Manrope, sans-serif; font-size:9.5px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(18,18,18,0.6)">Secondary</span>
+      </div>
+      <div class="sw" style="background:#FFD333; padding:clamp(18px,3vh,34px) 14px; display:flex; flex-direction:column; gap:5px; min-height:104px; justify-content:flex-end">
+        <span style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.1em; color:#121212">#FFD333</span>
+        <span style="font-family:Manrope, sans-serif; font-size:9.5px; letter-spacing:0.13em; text-transform:uppercase; color:#121212">Accent</span>
+      </div>
+      <div class="sw" style="background:#383838; padding:clamp(18px,3vh,34px) 14px; display:flex; flex-direction:column; gap:5px; min-height:104px; justify-content:flex-end">
+        <span style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.1em; color:#FAFAFA">#383838</span>
+        <span style="font-family:Manrope, sans-serif; font-size:9.5px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(250,250,250,0.6)">Shade</span>
+      </div>
+      <div class="sw" style="background:#727272; padding:clamp(18px,3vh,34px) 14px; display:flex; flex-direction:column; gap:5px; min-height:104px; justify-content:flex-end">
+        <span style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.1em; color:#FAFAFA">#727272</span>
+        <span style="font-family:Manrope, sans-serif; font-size:9.5px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(250,250,250,0.72)">Shade</span>
+      </div>
+      <div class="sw" style="background:#E3E3E3; padding:clamp(18px,3vh,34px) 14px; display:flex; flex-direction:column; gap:5px; min-height:104px; justify-content:flex-end">
+        <span style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.1em; color:#121212">#E3E3E3</span>
+        <span style="font-family:Manrope, sans-serif; font-size:9.5px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(18,18,18,0.6)">Shade</span>
+      </div>
+    </div>
+
+    <div class="om-2" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:1px; background:rgba(18,18,18,0.14); border:1px solid rgba(18,18,18,0.14); border-top:none">
+      <div class="spec" style="background:#FAFAFA; display:flex; flex-direction:column; gap:10px; padding:clamp(20px,3.5vh,40px) clamp(16px,3vw,36px)">
+        <div style="display:flex; flex-wrap:wrap; gap:8px 16px; align-items:baseline; font-family:Manrope, sans-serif; font-size:10.5px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(18,18,18,0.55)"><span style="color:#121212">Primary</span><span>Clash Grotesk Variable</span></div>
+        <span style="font-family:'Clash Grotesk', Archivo, sans-serif; font-size:clamp(19px,2.6vw,40px); font-weight:500; letter-spacing:-0.03em; line-height:1.05">Take back your margins</span>
+      </div>
+      <div class="spec" style="background:#FAFAFA; display:flex; flex-direction:column; gap:10px; padding:clamp(20px,3.5vh,40px) clamp(16px,3vw,36px)">
+        <div style="display:flex; flex-wrap:wrap; gap:8px 16px; align-items:baseline; font-family:Manrope, sans-serif; font-size:10.5px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(18,18,18,0.55)"><span style="color:#121212">Secondary</span><span>Manrope</span></div>
+        <span style="font-family:Manrope, sans-serif; font-size:clamp(17px,2.2vw,34px); font-weight:500; letter-spacing:-0.02em; line-height:1.15">Automating dispatch, billing and fleet operations</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#121212; color:#FAFAFA; overflow:hidden; padding:11px 0; border-top:1px solid rgba(18,18,18,0.12)">
+    <div style="display:flex; width:max-content; animation:mkTicker 30s linear infinite; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.18em; text-transform:uppercase">
+      <span style="padding-right:38px">AI Copilot for trucking workflows</span><span style="padding-right:38px; color:#FFD333">✳</span>
+      <span style="padding-right:38px">Rebuilt the brand from the ground up</span><span style="padding-right:38px; color:#FFD333">✳</span>
+      <span style="padding-right:38px">Directed a team of 8 creatives</span><span style="padding-right:38px; color:#FFD333">✳</span>
+      <span style="padding-right:38px">AI Copilot for trucking workflows</span><span style="padding-right:38px; color:#FFD333">✳</span>
+      <span style="padding-right:38px">Rebuilt the brand from the ground up</span><span style="padding-right:38px; color:#FFD333">✳</span>
+      <span style="padding-right:38px">Directed a team of 8 creatives</span><span style="padding-right:38px; color:#FFD333">✳</span>
+    </div>
+  </div>
+
+  <div style="padding:clamp(40px,9vh,110px) 20px clamp(30px,6vh,80px); border-bottom:1px solid rgba(18,18,18,0.14)">
+    <div style="display:flex; flex-wrap:wrap; gap:10px 18px; align-items:baseline; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(18,18,18,0.55); padding-bottom:clamp(18px,3vh,32px)">
+      <span style="color:#121212">03 - THE WEBSITES</span>
+      <span style="background:#FFD333; color:#121212; padding:4px 8px">Framer + custom code</span>
+    </div>
+    <h2 class="rise" style="margin:0; font-size:clamp(38px,8.6vw,150px); font-weight:600; letter-spacing:-0.05em; line-height:0.86; text-transform:uppercase">Built the sites<br>the brand <span style="color: #FFD334">deserved</span></h2>
+    <div class="om-2" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(18px,4vw,60px); padding-top:clamp(24px,5vh,60px); font-family:Manrope, sans-serif">
+      <p style="margin:0; font-size:clamp(14px,1.35vw,19px); line-height:1.5; font-weight:600; text-wrap:pretty">Selling used to mean driving to the customer. Two sites turned that around. Carriers arrive already understanding the product, and outreach scales past what a room full of reps could cover.</p>
+      <p style="margin:0; font-size:13.5px; line-height:1.6; color:rgba(18,18,18,0.75); text-wrap:pretty">Both run on the redesigned system: same mark, same accent, same voice, structured so every question a fleet owner asks gets answered before the first call.</p>
+    </div>
+
+    <div style="padding-top:clamp(26px,5vh,60px); display:flex; flex-direction:column; gap:clamp(30px,6vh,80px)">
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,2.5vh,26px)">
+        <div class="mkTile" data-soft="1" style="overflow:hidden; background:#121212; aspect-ratio:1.78">
+          <img src="assets/web/assets_marketing_site-hemut-hero.jpg" alt="hemut.com home page" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block">
+        </div>
+        <div class="om-2" style="display:grid; grid-template-columns:minmax(0,0.85fr) minmax(0,1fr); gap:clamp(16px,3vw,44px); align-items:start">
+          <div style="display:flex; flex-direction:column; gap:12px">
+            <span style="font-size:clamp(26px,3vw,50px); font-weight:600; letter-spacing:-0.04em; line-height:0.94">Hemut</span>
+            <a href="https://hemut.com/#hero" target="_blank" rel="noopener" style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; border-bottom:1px solid rgba(18,18,18,0.3); width:max-content; padding-bottom:2px">hemut.com ↗</a>
+            <p style="margin:0; font-family:Manrope, sans-serif; font-size:13.5px; line-height:1.6; color:rgba(18,18,18,0.75); text-wrap:pretty">The main site. Leads with the argument, legacy software and bloated subscriptions are the problem. Then lays out the AI workforce behind Command, Core, Forge and Reach so a broker can self-qualify.</p>
+            <span style="font-family:Manrope, sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(18,18,18,0.55)">FRAMER &amp; CUSTOM CODE - STRUCTURE, COPY, ART DIRECTION</span>
+          </div>
+          <div class="mkTile" data-soft="1" style="overflow:hidden; background:#121212; aspect-ratio:1.78">
+            <img src="assets/web/assets_marketing_site-hemut-solutions.jpg" alt="hemut.com solutions section" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block">
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,2.5vh,26px)">
+        <div class="mkTile" data-soft="1" style="overflow:hidden; background:#121212; aspect-ratio:1.9">
+          <img src="assets/web/assets_marketing_site-diesel-hero.jpg" alt="Hemut Diesel home page" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block">
+        </div>
+        <div class="om-2" style="display:grid; grid-template-columns:minmax(0,0.85fr) minmax(0,1fr); gap:clamp(16px,3vw,44px); align-items:start">
+          <div style="display:flex; flex-direction:column; gap:12px">
+            <span style="font-size:clamp(26px,3vw,50px); font-weight:600; letter-spacing:-0.04em; line-height:0.94">Hemut Diesel</span>
+            <a href="https://gethemutdiesel.com/" target="_blank" rel="noopener" style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; border-bottom:1px solid rgba(18,18,18,0.3); width:max-content; padding-bottom:2px">gethemutdiesel.com ↗</a>
+            <p style="margin:0; font-family:Manrope, sans-serif; font-size:13.5px; line-height:1.6; color:rgba(18,18,18,0.75); text-wrap:pretty">The fuel-card arm of the company, aimed at small fleets and owner-operators. One number does the selling up to $2 a gallon. Held up by the card, the network and the savings per truck.</p>
+            <span style="font-family:Manrope, sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(18,18,18,0.55)">FRAMER &amp; CUSTOM CODE - STRUCTURE, COPY, ART DIRECTION</span>
+          </div>
+          <div class="mkTile" data-soft="1" style="overflow:hidden; background:#121212; aspect-ratio:1.78">
+            <img src="assets/web/assets_marketing_site-diesel-grid.jpg" alt="Hemut Diesel benefits grid" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:clamp(40px,9vh,110px) 20px; border-bottom:1px solid rgba(18,18,18,0.14)">
+    <div style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(18,18,18,0.55); padding-bottom:clamp(20px,4vh,40px)">04 - CONTENT ENGINE</div>
+    <div class="om-2" style="display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:clamp(20px,3.5vw,52px); align-items:start">
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,2.5vh,24px)">
+        <h3 style="margin:0; font-size:clamp(24px,3.2vw,54px); font-weight:500; letter-spacing:-0.035em; line-height:1; max-width:24ch; text-wrap:pretty">Every post argued one point a dispatcher already felt.</h3>
+        <div class="om-2" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(12px,2vw,20px)">
+          <figure class="proof" style="margin:0; display:flex; flex-direction:column; gap:8px">
+            <img src="assets/web/assets_marketing_campaign-eld.jpg" alt="ELD fraud campaign post" loading="lazy" style="width:100%; height:auto; display:block; border:1px solid rgba(18,18,18,0.14)">
+            <figcaption style="font-family:Manrope, sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(18,18,18,0.5)">Compliance isn't a cost center</figcaption>
+          </figure>
+          <figure class="proof" style="margin:0; display:flex; flex-direction:column; gap:8px">
+            <img src="assets/web/assets_marketing_campaign-insurance.jpg" alt="Insurance cost-per-mile campaign post" loading="lazy" style="width:100%; height:auto; display:block; border:1px solid rgba(18,18,18,0.14)">
+            <figcaption style="font-family:Manrope, sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(18,18,18,0.5)">Insurance isn't a fixed cost</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px; border-top:2px solid #FFD333; padding-top:16px">
+        <span style="font-size:clamp(22px,2.6vw,40px); font-weight:600; letter-spacing:-0.035em; line-height:1">Hemut Office</span>
+        <p style="margin:0; font-family:Manrope, sans-serif; font-size:13px; line-height:1.6; color:rgba(18,18,18,0.72); text-wrap:pretty">A series that showed the company's people with a warm, humorous tone — the counterweight to the hard-numbers campaign work.</p>
+        <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:10px">
+          <figure class="proof" style="margin:0; display:flex; flex-direction:column; gap:7px">
+            <img src="assets/web/assets_marketing_office-ep2.jpg" alt="Hemut Office Ep.2" loading="lazy" style="width:100%; height:auto; display:block; border:1px solid rgba(18,18,18,0.14)">
+            <figcaption style="font-family:Manrope, sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(18,18,18,0.5)">EP.2 - CUTTING CORNERS</figcaption>
+          </figure>
+          <figure class="proof" style="margin:0; display:flex; flex-direction:column; gap:7px">
+            <img src="assets/web/assets_marketing_office-ep9.jpg" alt="Hemut Office Ep.9" loading="lazy" style="width:100%; height:auto; display:block; border:1px solid rgba(18,18,18,0.14)">
+            <figcaption style="font-family:Manrope, sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(18,18,18,0.5)">EP.9 - THE HERO WE NEED</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:clamp(40px,9vh,110px) 20px">
+    <div style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(18,18,18,0.55); padding-bottom:clamp(20px,4vh,40px)">05 - THE NUMBERS</div>
+    <div class="om-3" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:clamp(20px,3vw,44px)">
+      <div class="stat" style="display:flex; flex-direction:column; gap:8px; border-top:2px solid #121212; padding-top:14px">
+        <span style="font-size:clamp(38px,5.4vw,92px); font-weight:600; letter-spacing:-0.04em; line-height:0.88">2.9M</span>
+        <span style="font-family:Manrope, sans-serif; font-size:10.5px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(18,18,18,0.6)">Views in 15 days<br>+63,799%</span>
+      </div>
+      <div class="stat" style="display:flex; flex-direction:column; gap:8px; border-top:2px solid #121212; padding-top:14px">
+        <span style="font-size:clamp(38px,5.4vw,92px); font-weight:600; letter-spacing:-0.04em; line-height:0.88">11.1K</span>
+        <span style="font-family:Manrope, sans-serif; font-size:10.5px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(18,18,18,0.6)">Followers in 45 days<br>+5,343.9%</span>
+      </div>
+      <div class="stat" style="display:flex; flex-direction:column; gap:8px; border-top:2px solid #121212; padding-top:14px">
+        <span style="font-size:clamp(38px,5.4vw,92px); font-weight:600; letter-spacing:-0.04em; line-height:0.88">21.4K</span>
+        <span style="font-family:Manrope, sans-serif; font-size:10.5px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(18,18,18,0.6)">Profile visits<br>+715,100%</span>
+      </div>
+      <div class="stat" style="display:flex; flex-direction:column; gap:8px; border-top:2px solid #FFD333; padding-top:14px">
+        <span style="font-size:clamp(38px,5.4vw,92px); font-weight:600; letter-spacing:-0.04em; line-height:0.88">$500K+</span>
+        <span style="font-family:Manrope, sans-serif; font-size:10.5px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(18,18,18,0.6)">Pipeline from<br>generated leads</span>
+      </div>
+    </div>
+    <div class="om-3" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:clamp(14px,2vw,26px); padding-top:clamp(26px,5vh,56px)">
+      <figure class="proof" style="margin:0; display:flex; flex-direction:column; gap:8px">
+        <img src="assets/web/assets_marketing_metrics-views.jpg" alt="Views dashboard" loading="lazy" style="width:100%; height:auto; display:block; border:1px solid rgba(18,18,18,0.14)">
+        <figcaption style="font-family:Manrope, sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(18,18,18,0.5)">Meta — all views, Feb 15 → Mar 1</figcaption>
+      </figure>
+      <figure class="proof" style="margin:0; display:flex; flex-direction:column; gap:8px">
+        <img src="assets/web/assets_marketing_metrics-audience.jpg" alt="Audience dashboard" loading="lazy" style="width:100%; height:auto; display:block; border:1px solid rgba(18,18,18,0.14)">
+        <figcaption style="font-family:Manrope, sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(18,18,18,0.5)">Meta — audience, Feb 15 → Mar 31</figcaption>
+      </figure>
+      <figure class="proof" style="margin:0; display:flex; flex-direction:column; gap:8px">
+        <img src="assets/web/assets_marketing_metrics-visits.jpg" alt="Visits dashboard" loading="lazy" style="width:100%; height:auto; display:block; border:1px solid rgba(18,18,18,0.14)">
+        <figcaption style="font-family:Manrope, sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(18,18,18,0.5)">Meta — profile visits, 45 days</figcaption>
+      </figure>
+    </div>
+    <figure class="proof" style="margin:0; display:flex; flex-direction:column; gap:8px; padding-top:clamp(14px,2vw,26px)">
+      <img src="assets/web/assets_marketing_metrics-topposts.jpg" alt="Top posts by views" loading="lazy" style="width:100%; height:auto; display:block; border:1px solid rgba(18,18,18,0.14)">
+      <figcaption style="font-family:Manrope, sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(18,18,18,0.5)">META - TOP POSTS BY VIEWS, LEAD POST AT 2.45M</figcaption>
+    </figure>
+  </div>
+
+  <div style="padding:clamp(28px,6vh,64px) 20px clamp(20px,3vh,30px); border-top:1px solid rgba(18,18,18,0.14); display:flex; flex-direction:column; gap:clamp(24px,4vh,48px)">
+    <div style="display:flex; flex-wrap:wrap; gap:12px 24px; justify-content:space-between; align-items:baseline">
+      <a class="pagelink" data-title="About" href="About.dc.html" style="font-family:'Clash Grotesk', Archivo, sans-serif; font-size:clamp(30px,6vw,104px); font-weight:600; letter-spacing:-0.045em; text-transform:uppercase; line-height:0.86">NEXT - ABOUT</a>
+      <span style="font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; color:rgba(18,18,18,0.5)">HEMUT, 08/2025-08/2026</span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:14px 34px; justify-content:space-between; align-items:flex-end; border-top:1px solid rgba(18,18,18,0.14); padding-top:18px; font-family:Manrope, sans-serif; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(18,18,18,0.55)">
+      <span style="display:flex; flex-wrap:wrap; gap:10px 26px">
+        <a href="mailto:tackaidan@gmail.com">tackaidan@gmail.com</a>
+        <a href="tel:+17794234116">779.423.4116</a>
+        <a href="https://www.linkedin.com/in/aidan-tack-334219323/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/tacks_perspective/" target="_blank" rel="noopener">Instagram</a>
+      </span>
+      <span>Chicago, IL -&nbsp;<span id="clock" style="color: rgb(138, 106, 0);">6:06:05 PM</span></span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  componentDidMount() { this.initSmooth(); this.initCurtain(); this.initClock(); this.initMotion(); }
+  componentWillUnmount() {
+    if (this.smoothRaf) cancelAnimationFrame(this.smoothRaf); if (this.clockT) clearInterval(this.clockT); }
+  initSmooth() {
+    const L = window.Lenis;
+    if (!L || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const ST = window.ScrollTrigger;
+    if (window.__lenis) {
+      if (ST) window.__lenis.on('scroll', ST.update);
+      this.bindAnchors(window.__lenis);
+      return;
+    }
+    const lenis = new L({
+      duration: 1.15,
+      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      wheelMultiplier: 0.9,
+      touchMultiplier: 1.6
+    });
+    window.__lenis = lenis;
+    if (window.gsap) window.gsap.ticker.lagSmoothing(0);
+    if (ST) lenis.on('scroll', ST.update);
+    const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
+    requestAnimationFrame(raf);
+    this.bindAnchors(lenis);
+  }
+  bindAnchors(lenis) {
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      if (a.dataset.smoothBound) return;
+      a.dataset.smoothBound = '1';
+      a.addEventListener('click', e => {
+        const el = document.querySelector(a.getAttribute('href'));
+        if (!el) return;
+        e.preventDefault();
+        lenis.scrollTo(el, { offset: -70 });
+      });
+    });
+  }
+  initCurtain() {
+    const g = window.gsap, c = document.getElementById('curtain');
+    if (!c) return;
+    const t = c.querySelector('#curtainTitle');
+    if (g && !window.__introPlayed) {
+      window.__introPlayed = 1;
+      c.style.translate = '0 0';
+      g.set(c, { yPercent: 0 });
+      if (t) {
+        g.set(t, { opacity: 0, yPercent: 0 });
+        g.to(t, { opacity: 1, duration: 0.3, ease: 'power2.out' });
+        g.to(t, { opacity: 0, duration: 0.3, delay: 0.5 });
+      }
+      g.to(c, { yPercent: -100, duration: 0.95, ease: 'expo.inOut', delay: 0.55 });
+    }
+    document.querySelectorAll('a.pagelink').forEach(a => {
+      if (a.dataset.curtainBound) return;
+      a.dataset.curtainBound = '1';
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href || e.metaKey || e.ctrlKey || e.shiftKey) return;
+        if (!g) return;
+        e.preventDefault();
+        c.style.translate = '0 0';
+        if (t) {
+          t.textContent = a.dataset.title || 'Tack';
+          g.set(t, { opacity: 1, yPercent: 40 });
+        }
+        g.set(c, { yPercent: 100 });
+        g.to(c, { yPercent: 0, duration: 0.7, ease: 'expo.inOut' });
+        if (t) g.to(t, { yPercent: 0, duration: 0.7, ease: 'expo.out', onComplete: () => { window.location.href = href; } });
+        else g.delayedCall(0.7, () => { window.location.href = href; });
+      });
+    });
+  }
+  initClock() {
+    const el = document.getElementById('clock'); if (!el) return;
+    const tick = () => { el.textContent = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Chicago', hour12: true, hour: 'numeric', minute: '2-digit', second: '2-digit' }); };
+    tick(); this.clockT = setInterval(tick, 1000);
+  }
+  initMotion() {
+    const g = window.gsap; if (!g) return;
+    const ST = window.ScrollTrigger; if (ST) g.registerPlugin(ST);
+    const frame = document.getElementById('hemutFrame');
+    if (frame) g.fromTo(frame, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.2, ease: 'expo.out', delay: 0.5 });
+    if (!ST) return;
+    g.utils.toArray('.rise').forEach(el => g.fromTo(el, { yPercent: 22, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 88%' } }));
+    g.utils.toArray('.stat').forEach((el, i) => g.fromTo(el, { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, delay: i * 0.05, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 92%' } }));
+    g.utils.toArray('.proof').forEach(el => g.fromTo(el, { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 94%' } }));
+    g.utils.toArray('.mkTile').forEach(el => {
+      const img = el.querySelector('img'); if (!img) return;
+      const soft = !!el.dataset.soft;
+      g.set(img, { scale: soft ? 1.03 : 1.14, transformOrigin: '50% 50%' });
+      const d = soft ? 1.2 : 6;
+      g.fromTo(img, { yPercent: -d }, { yPercent: d, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } });
+      g.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.9, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 92%' } });
+    });
+    g.utils.toArray('.sw').forEach((el, i) => g.fromTo(el, { yPercent: 14, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.8, delay: i * 0.04, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 94%' } }));
+    g.utils.toArray('.spec').forEach(el => g.fromTo(el.querySelector('span:last-child'), { yPercent: 40, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 90%' } }));
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
